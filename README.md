@@ -63,6 +63,6 @@ public int factorial(int n) {
 ```
 
 **Explanation:**
-<img src="graphicexamples/Screenshot at 2023-05-28 16-56-07.png">
+<img src="graphicexamples/factorial.png">
 
 
