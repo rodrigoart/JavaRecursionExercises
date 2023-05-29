@@ -78,13 +78,13 @@ bunnyEars(0) → 0
 bunnyEars(1) → 2
 bunnyEars(2) → 4
 
-**Clue** For every bunny we just need to add 2 ears. 
+**Clue:** For every bunny we just need to add 2 ears. 
 
-**Tip1** Remember to decrease the bunny numbers.
+**Tip1:** Remember to decrease the bunny numbers.
 
-**Tip2** Try to always avoid auxiliary variables or additional parameters. Try to do it with only 1 parameter and without other variables.
+**Tip2:** Try to always avoid auxiliary variables or additional parameters. Try to do it with only 1 parameter and without other variables.
 
-**Solution** 
+**Solution:** 
 
  ```java
 public int bunnyEars(int bunnies) {
@@ -96,6 +96,6 @@ public int bunnyEars(int bunnies) {
 
 **Explanation:**
 <img src="graphicexamples/bunnyEars.png">
-
+As the previous example we operate n with the returned value, now we just add 2 to the returned value recursively. 
 
 
