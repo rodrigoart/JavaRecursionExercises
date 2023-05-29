@@ -40,7 +40,7 @@ Now that we have a better understanding of recursive algorithms, let's dive into
 
 ## Excercises, Tips, Clues and Solutions.
 
- - **Factorial:**
+ - **Factorial**
 
 A factorial number is a mathematical concept that represents the multiplication of all positive integers from 1 to a given number. It is denoted using the exclamation mark symbol (!). For example, the factorial of 5 is written as 5! and is calculated by multiplying 5 by 4, then by 3, then by 2, and finally by 1, resulting in 120. Factorial numbers are used in various areas of mathematics and statistics, as well as in recursive algorithms and combinatorics.
 
@@ -98,4 +98,56 @@ public int bunnyEars(int bunnies) {
 <img src="graphicexamples/bunnyEars.png">
 As the previous example we operate n with the returned value, now we just add 2 to the returned value recursively. 
 
+
+ - **Fibonacci** 
+ 
+The fibonacci sequence is a famous bit of mathematics, and it happens to have a recursive definition. The first two values in the sequence are 0 and 1 (essentially 2 base cases). Each subsequent value is the sum of the previous two values, so the whole sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21 and so on. Define a recursive fibonacci(n) method that returns the nth fibonacci number, with n=0 representing the start of the sequence.
+
+fibonacci(0) → 0
+fibonacci(1) → 1
+fibonacci(2) → 1
+
+**Tip**: The Fibonacci sequence is a mathematical sequence in which each number is the sum of the two previous numbers. The formula to calculate a number in the Fibonacci sequence is:
+
+ ```java
+F(n) = F(n-1) + F(n-2)
+```
+
+Where n is the index of the number you want to compute and F(n) is the value of the number at that position.
+
+If we want to generate the first 6 numbers of the Fibonacci sequence, we can start with the two initial numbers, which are 0 and 1:
+
+Then, we can use the formula to calculate the next numbers in the sequence:
+
+ ```java
+F(2) = F(1) + F(0) = 1 + 0 = 1
+F(3) = F(2) + F(1) = 1 + 1 = 2
+F(4) = F(3) + F(2) = 2 + 1 = 3
+F(5) = F(4) + F(3) = 3 + 2 = 5
+F(6) = F(5) + F(4) = 5 + 3 = 8
+```
+
+Therefore, the first 6 numbers in the Fibonacci sequence are:
+
+ ```java
+0, 1, 1, 2, 3, 5, 8
+```
+**Clue**: Remember that F(n) will return a specific number, but before we get F(n) we need to know how much is F(n-1) + F(n-2).
+
+**Solution:**
+
+ ```java
+    public static int fibonacci(int n) {
+        if (n == 0)
+            return 0;
+        else if (n == 1)
+            return 1;
+
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+```
+
+**Explanation:**
+
+<img src="graphicexamples/fibonacci.png">
 
