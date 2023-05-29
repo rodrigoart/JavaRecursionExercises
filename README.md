@@ -44,9 +44,13 @@ Now that we have a better understanding of recursive algorithms, let's dive into
 
 A factorial number is a mathematical concept that represents the multiplication of all positive integers from 1 to a given number. It is denoted using the exclamation mark symbol (!). For example, the factorial of 5 is written as 5! and is calculated by multiplying 5 by 4, then by 3, then by 2, and finally by 1, resulting in 120. Factorial numbers are used in various areas of mathematics and statistics, as well as in recursive algorithms and combinatorics.
 
+factorial(1) → 1
+factorial(2) → 2
+factorial(3) → 6
+
 **Excersise:** Given n of 1 or more, return the factorial of n, which is n * (n-1) * (n-2) ... 1. Compute the result recursively (without loops).
 
-**Clue:** The secret to resolve this algorithm is by looking at the formula. 
+**Clue:** The secret to resolve this algorithm is by looking at the formula: n * (n-1) * (n-2) ... 1.
 
 **Tip:** Remember that we need to get focused on what the function will return in the future and then operate the value.
 
@@ -64,5 +68,34 @@ public int factorial(int n) {
 
 **Explanation:**
 <img src="graphicexamples/factorial.png">
+As we mentioned before the secret is to know what my function will return in the future and how we will operate the return value, as you can see in the picutre every iteration trys to return the n value by the value that will get evenctually.
+
+ - **bunnyEars**
+
+**Excersise**: We have a number of bunnies and each bunny has two big floppy ears. We want to compute the total number of ears across all the bunnies recursively (without loops or multiplication).
+
+bunnyEars(0) → 0
+bunnyEars(1) → 2
+bunnyEars(2) → 4
+
+**Clue** For every bunny we just need to add 2 ears. 
+
+**Tip1** Remember to decrease the bunny numbers.
+
+**Tip2** Try to always avoid auxiliary variables or additional parameters. Try to do it with only 1 parameter and without other variables.
+
+**Solution** 
+
+ ```java
+public int bunnyEars(int bunnies) {
+  if(bunnies == 0) return 0;
+  
+  return 2 + bunnyEars(--bunnies);
+}
+```
+
+**Explanation:**
+<img src="graphicexamples/bunnyEars.png">
+
 
 
